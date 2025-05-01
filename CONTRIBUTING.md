@@ -1,0 +1,1 @@
+This project is a demonstration of a landing page for businesses that can help by having an identity on internet. The contribution to this repository is not available and any pull request is not accepted. This is because the project is not intender to be scalable in such way that help is needed
