@@ -1,122 +1,470 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoTechPro Landing Page</title>
+    <meta name="description" content="AutoTechPro - Servicio de mecánica integral automotriz de alta calidad en España">
+    <title>AutoTechPro | Mecánica Integral Automotriz</title>
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .hero-section {
-            background: linear-gradient(to right, #4BA89E, #2F4F4F);
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        .fade-in {
-            animation: fadeIn 1.5s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-    </style>
+    <!-- Font Awesome for better icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/landing.css"
 </head>
 <body>
-    <!-- Hero Section -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></a>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <span class="ms-2">AutoTechPro</span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Inicio</a>
+                        <a class="nav-link" href="#inicio">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Servicios</a>
+                        <a class="nav-link" href="#servicios">Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contacto</a>
+                        <a class="nav-link" href="#nosotros">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonios">Testimonios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#galeria">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <header class="hero-section">
-        <div class="container fade-in">
-            <h1 class="display-3 fw-bold">Bienvenido a AutoTechPro</h1>
-            <p class="lead">Tu fiel compañero en mecanica integral automotriz.</p>
-            <img src="../images/logo.jpg" alt="Business Image" class="img-fluid rounded-circle shadow-lg mt-4" style="max-width: 300px;">
-            <div class="mt-4">
-                <a href="#contact" class="btn btn-light btn-lg me-2">Contactanos</a>
-                <a href="#services" class="btn btn-outline-light btn-lg">Ver servicios</a>
+
+    <!-- Hero Section -->
+    <header class="hero-section" id="inicio">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content fade-in">
+                    <h1 class="display-3 fw-bold mb-4">Servicio automotriz de excelencia</h1>
+                    <p class="lead mb-4">En AutoTechPro ofrecemos soluciones integrales para tu vehículo con la última tecnología y profesionales certificados.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#contacto" class="btn btn-primary btn-lg">
+                            <i class="fas fa-calendar-check me-2"></i>Agendar cita
+                        </a>
+                        <a href="#servicios" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-tools me-2"></i>Nuestros servicios
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center fade-in">
+                    <img src="../images/logo.jpg" alt="AutoTechPro" class="img-fluid img-rounded rounded shadow-lg ">
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Contact Form -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Contact Us</h2>
+    <div class="col-lg-7 justify-content-center text-center d-flex mt-5 mb-5">
+        <div class="contact-form">
             <form class="needs-validation" novalidate>
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                        <div class="invalid-feedback">Please enter your name.</div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="name" placeholder="Nombre completo" required>
+                            <label for="name">Nombre completo</label>
+                            <div class="invalid-feedback">Por favor, ingrese su nombre.</div>
+                        </div>
                     </div>
                     <div class="col-md-6">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                        <div class="invalid-feedback">Please enter a valid email.</div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="Correo electrónico" required>
+                            <label for="email">Correo electrónico</label>
+                            <div class="invalid-feedback">Por favor, ingrese un correo válido.</div>
+                        </div>
                     </div>
-                </div>
-                <div class="mt-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" rows="4" placeholder="Your message" required></textarea>
-                    <div class="invalid-feedback">Please enter your message.</div>
-                </div>
-                <div class="text-center mt-4">
-                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3">
+                            <input type="tel" class="form-control" id="phone" placeholder="Teléfono" required>
+                            <label for="phone">Teléfono</label>
+                            <div class="invalid-feedback">Por favor, ingrese su teléfono.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3">
+                            <select class="form-select" id="service" required>
+                                <option value="" selected disabled>Seleccione un servicio</option>
+                                <option value="diagnostico">Diagnóstico Computarizado</option>
+                                <option value="mantenimiento">Mantenimiento Preventivo</option>
+                                <option value="electrico">Sistema Eléctrico</option>
+                                <option value="motor">Reparación de Motor</option>
+                                <option value="afinacion">Afinación y Rendimiento</option>
+                                <option value="ac">Aire Acondicionado</option>
+                                <option value="otro">Otro servicio</option>
+                            </select>
+                            <label for="service">Tipo de servicio</label>
+                            <div class="invalid-feedback">Por favor, seleccione un servicio.</div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="message" style="height: 120px" placeholder="Mensaje" required></textarea>
+                            <label for="message">Mensaje o detalles adicionales</label>
+                            <div class="invalid-feedback">Por favor, escriba su mensaje.</div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary btn-lg px-5">
+                            <i class="fas fa-paper-plane me-2"></i>Enviar mensaje
+                        </button>
+                    </div>
                 </div>
             </form>
         </div>
-    </section>
+    </div>
 
     <!-- Services Section -->
-    <section id="services" class="bg-light py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">What We Offer</h2>
+    <section id="servicios" class="py-5">
+        <div class="container py-5">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="fw-bold mb-3">Nuestros Servicios</h2>
+                    <p class="lead text-muted">Ofrecemos una amplia gama de soluciones automotrices para mantener tu vehículo en perfectas condiciones.</p>
+                </div>
+            </div>
             <div class="row g-4">
-                <div class="col-md-4 text-center">
-                    <div class="card shadow-sm h-100">
+                <div class="col-md-4">
+                    <div class="service-card card h-100 p-4 text-center">
                         <div class="card-body">
-                            <h4 class="card-title">Service 1</h4>
-                            <p class="card-text">High-quality automotive diagnostics and repairs.</p>
+                            <div class="service-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Diagnóstico Computarizado</h4>
+                            <p class="card-text text-muted">Utilizamos la última tecnología en diagnóstico para identificar con precisión cualquier problema en tu vehículo.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 text-center">
-                    <div class="card shadow-sm h-100">
+                <div class="col-md-4">
+                    <div class="service-card card h-100 p-4 text-center">
                         <div class="card-body">
-                            <h4 class="card-title">Service 2</h4>
-                            <p class="card-text">Advanced vehicle technology installations.</p>
+                            <div class="service-icon">
+                                <i class="fas fa-oil-can"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Mantenimiento Preventivo</h4>
+                            <p class="card-text text-muted">Servicio completo de mantenimiento para prevenir problemas y extender la vida útil de tu automóvil.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 text-center">
-                    <div class="card shadow-sm h-100">
+                <div class="col-md-4">
+                    <div class="service-card card h-100 p-4 text-center">
                         <div class="card-body">
-                            <h4 class="card-title">Service 3</h4>
-                            <p class="card-text">Comprehensive maintenance and support.</p>
+                            <div class="service-icon">
+                                <i class="fas fa-car-battery"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Sistema Eléctrico</h4>
+                            <p class="card-text text-muted">Reparación y mantenimiento de todo el sistema eléctrico incluyendo batería, alternador y arranque.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card card h-100 p-4 text-center">
+                        <div class="card-body">
+                            <div class="service-icon">
+                                <i class="fas fa-wrench"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Reparación de Motor</h4>
+                            <p class="card-text text-muted">Diagnóstico y reparación de motores con equipo especializado y técnicos certificados.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card card h-100 p-4 text-center">
+                        <div class="card-body">
+                            <div class="service-icon">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Afinación y Rendimiento</h4>
+                            <p class="card-text text-muted">Optimización del rendimiento de tu vehículo para mejorar su potencia y consumo de combustible.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card card h-100 p-4 text-center">
+                        <div class="card-body">
+                            <div class="service-icon">
+                                <i class="fas fa-snowflake"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Aire Acondicionado</h4>
+                            <p class="card-text text-muted">Reparación y recarga de sistemas de climatización para que disfrutes de la temperatura ideal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="nosotros" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="/api/placeholder/600/400" alt="Nuestro taller" class="img-fluid rounded shadow-lg">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">¿Por qué elegir AutoTechPro?</h2>
+                    <p class="lead mb-4">Con más de 15 años de experiencia, nos hemos convertido en referentes de la mecánica automotriz de calidad.</p>
+                    <div class="d-flex mb-3">
+                        <div class="me-3 text-primary">
+                            <i class="fas fa-check-circle fa-2x"></i>
+                        </div>
+                        <div>
+                            <h5>Técnicos Certificados</h5>
+                            <p class="text-muted">Nuestro equipo está formado por profesionales con certificaciones y constante capacitación.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <div class="me-3 text-primary">
+                            <i class="fas fa-check-circle fa-2x"></i>
+                        </div>
+                        <div>
+                            <h5>Tecnología Avanzada</h5>
+                            <p class="text-muted">Utilizamos equipos de diagnóstico y herramientas de última generación.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <div class="me-3 text-primary">
+                            <i class="fas fa-check-circle fa-2x"></i>
+                        </div>
+                        <div>
+                            <h5>Garantía en Servicio</h5>
+                            <p class="text-muted">Todos nuestros trabajos cuentan con garantía para tu tranquilidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-md-3 col-6">
+                    <div class="stat-box">
+                        <div class="stat-number" data-count="15">0</div>
+                        <div class="stat-title">Años de experiencia</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-box">
+                        <div class="stat-number" data-count="5000">0</div>
+                        <div class="stat-title">Clientes satisfechos</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-box">
+                        <div class="stat-number" data-count="12000">0</div>
+                        <div class="stat-title">Servicios completados</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-box">
+                        <div class="stat-number" data-count="25">0</div>
+                        <div class="stat-title">Técnicos certificados</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="fw-bold mb-3">Testimonios de Clientes</h2>
+                    <p class="lead text-muted">Qué dicen nuestros clientes sobre nuestra calidad de servicio.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="/api/placeholder/150/150" alt="Cliente" class="testimonial-img">
+                            <div class="ms-3">
+                                <h5 class="mb-0">Carlos Rodríguez</h5>
+                                <small class="text-muted">Cliente desde 2019</small>
+                            </div>
+                        </div>
+                        <div class="star-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-0">"Excelente servicio. Diagnosticaron el problema de mi coche rápidamente y lo repararon en menos tiempo del esperado. Muy profesionales."</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="/api/placeholder/150/150" alt="Cliente" class="testimonial-img">
+                            <div class="ms-3">
+                                <h5 class="mb-0">María González</h5>
+                                <small class="text-muted">Cliente desde 2020</small>
+                            </div>
+                        </div>
+                        <div class="star-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-0">"Me encanta la honestidad de este taller. Me explicaron todo el proceso, los costos y no hubo sorpresas. Definitivamente recomiendo AutoTechPro."</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="/api/placeholder/150/150" alt="Cliente" class="testimonial-img">
+                            <div class="ms-3">
+                                <h5 class="mb-0">Javier Martínez</h5>
+                                <small class="text-muted">Cliente desde 2021</small>
+                            </div>
+                        </div>
+                        <div class="star-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="mb-0">"Llevo mi flota de vehículos comerciales y siempre me dan un servicio rápido y eficiente. El mantenimiento preventivo ha reducido nuestros costos operativos."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="py-5">
+        <div class="container py-5">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="fw-bold mb-3">Galería de Trabajos</h2>
+                    <p class="lead text-muted">Conoce nuestras instalaciones y algunos de nuestros proyectos.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="gallery-img">
+                        <img src="/api/placeholder/600/400" alt="Taller" class="img-fluid w-100">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-img">
+                        <img src="/api/placeholder/600/400" alt="Reparación" class="img-fluid w-100">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-img">
+                        <img src="/api/placeholder/600/400" alt="Diagnóstico" class="img-fluid w-100">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-img">
+                        <img src="/api/placeholder/600/400" alt="Motor" class="img-fluid w-100">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-img">
+                        <img src="/api/placeholder/600/400" alt="Equipo" class="img-fluid w-100">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-img">
+                        <img src="/api/placeholder/600/400" alt="Vehículo" class="img-fluid w-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container py-5 position-relative" style="z-index: 1;">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="display-5 fw-bold mb-4">¿Listo para mejorar el rendimiento de tu vehículo?</h2>
+                    <p class="lead mb-4">Agenda una cita hoy mismo y déjanos cuidar de tu automóvil con la calidad que merece.</p>
+                    <a href="#contacto" class="btn btn-light btn-lg px-5">
+                        <i class="fas fa-calendar-check me-2"></i>Agendar ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact-section py-5">
+        <div class="container py-5">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="fw-bold mb-3">Contacto</h2>
+                    <p class="lead text-muted">¿Tienes dudas o quieres agendar una cita? Contáctanos y te responderemos lo antes posible.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <div class="px-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-map-marker-alt fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5>Dirección</h5>
+                                <p class="text-muted">Av. Principal #123, Ciudad</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-phone-alt fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5>Teléfono</h5>
+                                <p class="text-muted">+34 612 345 678</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-envelope fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5>Email</h5>
+                                <p class="text-muted">info@autotechpro.com</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-clock fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5>Horario</h5>
+                                <p class="text-muted">Lun - Vie: 8:00 - 19:00<br>Sábados: 9:00 - 14:00</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -126,37 +474,203 @@
 
     <!-- Social Media Section -->
     <section class="py-5">
-        <div class="container text-center">
-            <h2 class="mb-4">Follow Us</h2>
-            <div class="d-flex justify-content-center">
-                <a href="#" class="btn btn-outline-primary btn-lg mx-2"><i class="bi bi-facebook"></i> Facebook</a>
-                <a href="#" class="btn btn-outline-primary btn-lg mx-2"><i class="bi bi-twitter"></i> Twitter</a>
-                <a href="#" class="btn btn-outline-primary btn-lg mx-2"><i class="bi bi-instagram"></i> Instagram</a>
+        <div class="container py-4 text-center">
+            <h2 class="fw-bold mb-4">Síguenos en redes sociales</h2>
+            <div class="d-flex justify-content-center flex-wrap gap-3">
+                <a href="#" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p class="mb-0">&copy; 2023 AutoTechPro. All rights reserved.</p>
+    <footer class="py-5">
+        <div class="container py-4">
+            <div class="row g-4">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="fw-bold mb-4">AutoTechPro</h5>
+                    <p>Somos un taller automotriz con más de 15 años de experiencia, ofreciendo servicios de calidad y utilizando tecnología de punta para garantizar la mejor atención a nuestros clientes.</p>
+                    <div class="mt-4">
+                        <a href="#contacto" class="btn btn-outline-light">Contacto</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-4">Enlaces</h5>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-4">Servicios</h5>
+                    <ul class="footer-links">
+                        <li><a href="#servicios">Diagnóstico Computarizado</a></li>
+                        <li><a href="#servicios">Mantenimiento Preventivo</a></li>
+                        <li><a href="#servicios">Sistema Eléctrico</a></li>
+                        <li><a href="#servicios">Reparación de Motor</a></li>
+                        <li><a href="#servicios">Afinación y Rendimiento</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-4">Contacto</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Av. Principal #123, Ciudad</p>
+                    <p><i class="fas fa-phone-alt me-2"></i> +34 612 345 678</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@autotechpro.com</p>
+                    <p><i class="fas fa-clock me-2"></i> Lun - Vie: 8:00 - 19:00</p>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 AutoTechPro. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Diseñado con <i class="fas fa-heart text-danger"></i> para un servicio de calidad</p>
+                </div>
+            </div>
+        </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Bootstrap form validation
-        (function () {
-            'use strict'
-            const forms = document.querySelectorAll('.needs-validation')
-            Array.from(forms).forEach(form => {
-                form.addEventListener('submit', event => {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    }
-                    form.classList.add('was-validated')
-                }, false)
-            })
-        })()
-    </script>
 </body>
 </html>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Bootstrap form validation
+    (function () {
+        'use strict'
+        const forms = document.querySelectorAll('.needs-validation')
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                } else {
+                    event.preventDefault()
+                    // Here you would normally handle the form submission
+                    const formSuccess = document.createElement('div')
+                    formSuccess.className = 'alert alert-success mt-3'
+                    formSuccess.role = 'alert'
+                    formSuccess.innerHTML = '<i class="fas fa-check-circle me-2"></i>¡Mensaje enviado! Nos pondremos en contacto contigo pronto.'
+                    form.appendChild(formSuccess)
+                    form.reset()
+                    form.classList.remove('was-validated')
+                    
+                    setTimeout(() => {
+                        formSuccess.remove()
+                    }, 5000)
+                }
+                form.classList.add('was-validated')
+            }, false)
+        })
+    })()
+    
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar')
+        if (window.scrollY > 50) {
+            navbar.classList.add('navbar-scrolled')
+        } else {
+            navbar.classList.remove('navbar-scrolled')
+        }
+    })
+    
+    // Statistics counter animation
+    function animateStats() {
+        const stats = document.querySelectorAll('.stat-number')
+        stats.forEach(stat => {
+            const target = parseInt(stat.getAttribute('data-count'))
+            const duration = 2000 // 2 seconds
+            const increment = target / (duration / 16) // 60fps
+            
+            let current = 0
+            const timer = setInterval(() => {
+                current += increment
+                if (current >= target) {
+                    clearInterval(timer)
+                    stat.textContent = target.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                } else {
+                    stat.textContent = Math.floor(current).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                }
+            }, 16)
+        })
+    }
+    
+    // Intersection Observer for stats animation
+    const statsSection = document.querySelector('.stat-box')
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateStats()
+                observer.unobserve(entry.target)
+            }
+        })
+    }, { threshold: 0.1 })
+    
+    if (statsSection) {
+        observer.observe(statsSection)
+    }
+    
+    // Back to top button
+    const backToTopBtn = document.getElementById('backToTop')
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show')
+        } else {
+            backToTopBtn.classList.remove('show')
+        }
+    })
+    
+    backToTopBtn.addEventListener('click', function(e) {
+        e.preventDefault()
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    })
+    
+    // Smooth scrolling for all anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault()
+            
+            const targetId = this.getAttribute('href')
+            if (targetId === '#') return
+            
+            const targetElement = document.querySelector(targetId)
+            if (targetElement) {
+                const navbarHeight = document.querySelector('.navbar').offsetHeight
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                })
+                
+                // Close mobile navbar if open
+                const navbarToggler = document.querySelector('.navbar-toggler')
+                const navbarCollapse = document.querySelector('.navbar-collapse')
+                if (navbarCollapse.classList.contains('show')) {
+                    navbarToggler.click()
+                }
+            }
+        })
+    })
+</script>
